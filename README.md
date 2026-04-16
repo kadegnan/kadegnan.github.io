@@ -1,2 +1,2 @@
 # kadegnan.github.io
-CSC 362 Data Visualization Final Project 
+Projects completed for CSC 362 Data Visualization 
