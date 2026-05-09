@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSC 362 Final Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+  </head>
+  <body>
+    <h1>By the Numbers: Who Dominates Olympic Track & Field?</h1>
+      <p>
+        This project visualizes the top 5 countries with the most Olympic medals in track and field
+        using a grouped bar chart and a collapsible tree. The grouped bar chart
+        shows the distribution of medals across different years, while the
+        collapsible tree provides a hierarchical view of the medal winners, categorized by country, year, event, and athlete. 
+      </p>
+
+    <div class="charts-row">
+      <div id="grouped-bar-chart" class="chart-panel"></div>
+      <div id="collapsible-tree" class="chart-panel"></div>
+    </div>
+    <div id="help-popup" class="help-popup">
+      <button id="close-help" style="float: right; background: none; border: none; font-size: 30px; cursor: pointer;">&times;</button>
+      <h2>👋 Welcome! Here's how to explore the data</h2>
+      <h3>📊 Grouped Bar Chart (left)</h3>
+      <p><strong>Hover</strong> over any bar to see that country's total medal count for that year.</p>
+      <p><strong>Hover</strong> over a color in the legend to highlight that country across all years.</p>
+      <p><strong>Click</strong> on a year label on the left axis to explore that year's medals in the tree.</p>
+      <h3>Collapsible Tree (right)</h3>
+      <p><strong>Click</strong> on any circle to expand it and see the next level of detail.</p>
+      <p>Start with a <strong>country</strong> → expand to see <strong>events</strong> → expand again to see <strong>athletes</strong> and their medals.</p>
+      <p>Click the same circle again to collapse it.</p>
+    </div>
+   <div class="captions-container">
+    <p class="dataset_info"> Link to dataset: <a href="data/data.html">Olympic Medal Data</a></p>
+    <p class="ai_statement"> AI was partially used to generate this visualization. </p>
+    <p class="barchart_code"> Source code for grouped barchart: <a href="https://observablehq.com/@d3/grouped-bar-chart/2">Click here</a></p>
+    <p class="tree_code"> Source code for collapsible tree: <a href="https://observablehq.com/@d3/collapsible-tree">Click here</a></p>
+  </div>
+
+
+    <script src="js/d3.v6.min.js"></script>
+    <script src="js/collapsibleTree.js"></script>
+    <script src="js/groupedBarChart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+  window.addEventListener("load", () => {
+    d3.select("#help-popup").classed("show", true);
+  });
+</script>
+  </body>
+</html>
